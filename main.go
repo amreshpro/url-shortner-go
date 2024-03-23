@@ -3,13 +3,11 @@ package main
 import (
 	"fmt"
 	"net/http"
-
 	"os"
-
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/joho/godotenv"
-	"github.com/amreshpro/routes/user"
+	"github.com/amreshpro/url-shortner-go/routes/user"
 )
 
 

@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/go-chi/chi/v5"
-	"github.com/amreshpro/go-url-shortner/controller/userController"
+	"github.com/amreshpro/url-shortner-go/controller/userController"
 )
 
 func UserRouter() error {
