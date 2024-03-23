@@ -1,4 +1,4 @@
-module github.com/amreshpro/go-url-shortner
+module github.com/amreshpro/url-shortner-go
 
 go 1.22.1
 
