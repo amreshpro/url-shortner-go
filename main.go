@@ -43,7 +43,7 @@ func main() {
 
 
 // user router
-appRouter.Mount("/api/v1/",UserRouter)
+appRouter.Mount("/api/v1/",userRouter)
 
 
 	PORT := os.Getenv("PORT")
