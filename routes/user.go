@@ -1,14 +1,14 @@
 package routes
 
 import (
+	userController "github.com/amreshpro/url-shortner-go/controller/usercontroller"
 	"github.com/go-chi/chi/v5"
-	"github.com/amreshpro/url-shortner-go/controller"
 )
 
 func UserRouter() error {
 	userRouter := chi.NewRouter()
-	userRouter.Get("/user", controller.getUser())
-	userRouter.Get("/test", controller.testUser())
+	userRouter.Get("/user", userController.getUser())
+	userRouter.Get("/test", userController.testUser())
 
 	return nil
 }

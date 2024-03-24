@@ -1,4 +1,4 @@
-package controller
+package usercontroller
 
 import (
 	"net/http"
@@ -12,7 +12,7 @@ type User struct {
 	sex   string
 }
 
-func (u User)getUser(w http.ResponseWriter, r http.Request) User {
+func (u User)getUser(w http.ResponseWriter, r *http.Request) User {
 	return User{
 		1,
 		"AMRESH",
@@ -23,6 +23,6 @@ func (u User)getUser(w http.ResponseWriter, r http.Request) User {
 }
 
 
-func (u User) testUser(w http.ResponseWriter, r http.Request) error {
+func (u User) testUser(w http.ResponseWriter, r *http.Request) error {
 return nil
 }
