@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	userRouter "github.com/amreshpro/url-shortner-go/userroutes"
+	userRouter "github.com/amreshpro/url-shortner-go/routes/user"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/joho/godotenv"
