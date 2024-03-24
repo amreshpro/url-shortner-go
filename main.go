@@ -2,14 +2,13 @@ package main
 
 import (
 	"fmt"
-	"net/http"
-	"os"
+	userRouter "github.com/amreshpro/url-shortner-go/userroutes"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/joho/godotenv"
-	"github.com/amreshpro/url-shortner-go/routes"
+	"net/http"
+	"os"
 )
-
 
 func main() {
 
@@ -23,9 +22,8 @@ func main() {
 	//main router
 	appRouter := chi.NewRouter()
 
-//logger middleware
+	//logger middleware
 	appRouter.Use(middleware.Logger)
-
 
 	appRouter.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Hello World!"))
@@ -39,10 +37,8 @@ func main() {
 		w.Write([]byte("method is not valid"))
 	})
 
-
-// user router
-appRouter.Mount("/api/v1/",userRouter)
-
+	// user router
+	appRouter.Mount("/api/v1/", userRouter.userRouter)
 
 	PORT := os.Getenv("PORT")
 	fmt.Println(PORT)
